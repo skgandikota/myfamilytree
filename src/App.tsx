@@ -10,7 +10,6 @@ import FamilyTree from './module/familyChart/FamilyChart';
 function App() {
   const [user, loading] = useAuthState(auth);
   const [authorized, setAuthorized] = React.useState(false);
-  const [chartData, setChartData] = React.useState([]);
   useEffect(() => {
     const fetchUserName = async () => {
       try {
@@ -32,7 +31,7 @@ function App() {
     <div className='App'>
       <AppAppBar />
       {user && authorized ? (
-        <FamilyTree chart={chartData}/>
+        <FamilyTree />
       ) : user && !authorized ? (
         <>
         <Container maxWidth='md'>
