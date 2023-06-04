@@ -3,7 +3,12 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 90vmin;
+  pointer-events: none;
+}
+
+.App-unauthorized-logo{
+  height: calc(80vmin - 10vmin);
   pointer-events: none;
 }
 
@@ -14,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +33,4 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
