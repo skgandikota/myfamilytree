@@ -38,12 +38,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Build Docusaurus website
+      # Build  website
       - name: Build  website
         run: |
           pnpm run build
           echo 'myfamily.saikoushikg.in' > build/CNAME
-
+          
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
