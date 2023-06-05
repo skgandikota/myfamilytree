@@ -9,9 +9,7 @@
     <script src="./src/plugins/materialize.min.js"></script>
     <script src="./src/plugins/d3.v6.js"></script>
     <link rel="stylesheet" href="./styles/main.css" />
-
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
 
     <style>
       #FamilyChart {
@@ -64,11 +62,6 @@
     <script src="create-tree.js" type="module"></script>
 
     <script>
-      const firebase = require("firebase");
-      // Required for side-effects
-      require("firebase/firestore");
-
-
       document.addEventListener("DOMContentLoaded", function () {
         const modal = document.body.appendChild(document.createElement("div"));
         modal.setAttribute("id", "form_modal");
