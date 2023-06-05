@@ -9,8 +9,8 @@ import CircularProgress from "@mui/material/CircularProgress";
 const rightLink = {
   fontSize: 16,
   ml: 3,
-  fontFamily: "Roboto", 
-  fontWeight: 400
+  fontFamily: "Roboto",
+  fontWeight: 400,
 };
 
 function AppAppBar() {
@@ -40,15 +40,18 @@ function AppAppBar() {
               <Box
                 sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}
               >
-                <Link
-                  color='inherit'
-                  variant='h6'
-                  underline='none'
-                  sx={rightLink}
-                  href='/edit'
-                >
-                  {"Edit"}
-                </Link>
+                {user?.displayName == "Sai Koushik Gandikota" && (
+                  <Link
+                    color='inherit'
+                    variant='h6'
+                    underline='none'
+                    sx={rightLink}
+                    href='/edit'
+                  >
+                    {"Edit"}
+                  </Link>
+                )}
+
                 <Link
                   color='inherit'
                   variant='h6'
