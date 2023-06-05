@@ -40,7 +40,7 @@ function AppAppBar() {
               <Box
                 sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}
               >
-                {user?.displayName === "Sai Koushik Gandikota" && (
+                {user?.displayName === "Sai Koushik Gandikota" || user?.displayName === "Ramagopalg Gandikota" && (
                   <Link
                     color='inherit'
                     variant='h6'
