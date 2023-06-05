@@ -35,7 +35,7 @@ function App() {
       ) : user && !authorized ? (
         <>
         <Container maxWidth='md'>
-          <img src={"/hero.jpg"} className='App-unauthorized-logo' alt='logo' />
+          <img src={"/hero.png"} className='App-unauthorized-logo' alt='logo' />
           <Typography sx={{ textAlign: "center" }} variant='subtitle2' gutterBottom>
             {user.displayName} are Not authorized to view the page.
           </Typography>
