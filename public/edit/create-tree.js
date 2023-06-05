@@ -80,20 +80,7 @@ import { Form } from "./src/view/elements/Form.js";
 })();
 
 function firstNode() {
-  return [
-    {
-      id: "0",
-      rels: {},
-      data: {
-        "first name": "Name",
-        "last name": "Surname",
-        birthday: 1970,
-        avatar:
-          "https://static8.depositphotos.com/1009634/988/v/950/depositphotos_9883921-stock-illustration-no-user-profile-picture.jpg",
-        gender: "M",
-      },
-    },
-  ];
+  return JSON.parse(sessionStorage.getItem("chart"));
 }
 
 function cardEditParams() {
@@ -101,6 +88,8 @@ function cardEditParams() {
     { type: "text", placeholder: "first name", key: "first name" },
     { type: "text", placeholder: "last name", key: "last name" },
     { type: "text", placeholder: "birthday", key: "birthday" },
+    { type: "text", placeholder: "location", key: "location" },
+    { type: "text", placeholder: "phonenumber", key: "phonenumber" },
     { type: "text", placeholder: "avatar", key: "avatar" },
   ];
 }
@@ -108,9 +97,13 @@ function cardEditParams() {
 function cardDisplay() {
   const d1 = (d) =>
       `${d.data["first name"] || ""} ${d.data["last name"] || ""}`,
-    d2 = (d) => `${d.data["birthday"] || ""}`;
+    d2 = (d) => `${d.data["birthday"] || ""}`,
+    d3 = (d) => `${d.data["location"] || ""}`,
+    d4 = (d) => `${d.data["phonenumber"] || ""}`;
   d1.create_form = "{first name} {last name}";
   d2.create_form = "{birthday}";
+  d3.create_form = "{location}";
+  d4.create_form = "{phonenumber}";
 
-  return [d1, d2];
+  return [d1, d2, d3, d4];
 }

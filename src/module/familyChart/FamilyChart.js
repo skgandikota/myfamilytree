@@ -11,7 +11,8 @@ export default class FamilyTree extends React.Component {
     if (!this.cont.current) return;
     const p = query(collection(db, "data"));
     const newDoc = await getDocs(p);
-    const res = newDoc.docs[0].data();  
+    const res = newDoc.docs[0].data(); 
+    sessionStorage.setItem("chart", res.chart); 
     const store = f3.createStore({
         data: JSON.parse(res.chart),
         node_separation: 250,

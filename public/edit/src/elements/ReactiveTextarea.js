@@ -7,6 +7,7 @@ export default function ReactiveTextarea(updateData, textarea_selector, update_b
     updateData(JSON.parse(textarea.value))
   })
 
+
   return {update: updateTextArea}
 
   function updateTextArea(data) {

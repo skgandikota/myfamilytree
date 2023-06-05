@@ -45,6 +45,15 @@ function AppAppBar() {
                   variant='h6'
                   underline='none'
                   sx={rightLink}
+                  href='/edit'
+                >
+                  {"Edit"}
+                </Link>
+                <Link
+                  color='inherit'
+                  variant='h6'
+                  underline='none'
+                  sx={rightLink}
                   onClick={logout}
                 >
                   {"Logout"}
